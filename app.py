@@ -56,7 +56,7 @@ def add():
 @app.route("/update", methods=['GET', 'POST']) # Update Student
 def update():
     if request.method == 'POST':
-        student_id = request.form['ID']
+        ID = request.form['ID']
         new_name = request.form['new_name']
         new_email = request.form['new_email']
 
