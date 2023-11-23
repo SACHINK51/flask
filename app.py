@@ -53,7 +53,7 @@ def add():
     return render_template('add.html')
 
   return '{"Result":"Success"}'
-@app.route("/update", methods=['POST']) # Update Student
+@app.route("/update", methods=['GET', 'POST']) # Update Student
 def update():
     if request.method == 'POST':
         student_id = request.form['id']
