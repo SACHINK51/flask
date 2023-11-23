@@ -61,7 +61,7 @@ def update():
         new_email = request.form['new_email']
 
         cur = mysql.cursor()
-        s = '''UPDATE students SET studentName = '{}', email = '{}' WHERE ID = {};'''.format(new_name, new_email, student_id)
+        s = '''UPDATE students SET studentName = '{}', email = '{}' WHERE ID = {};'''.format(new_name, new_email, ID)
         app.logger.info(s)
         cur.execute(s)
         mysql.commit()
