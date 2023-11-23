@@ -68,7 +68,7 @@ def update():
 
         return '{"Result":"Success"}'
     else:
-        return '{"Result":"Error", "Message":"Invalid Request Method"}'
+        return render_template('update.html')
 @app.route("/") #Default - Show Data
 def hello(): # Name of the method
   cur = mysql.cursor() #create a connection to the SQL instance
